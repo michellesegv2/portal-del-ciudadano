@@ -79,6 +79,27 @@
     <footer>
       <p>© Copyright 2020. All Rights Reserved.</p>
     </footer>
+
+
+    <script>
+      // document.addEventListener("DOMContentLoaded", (event) => {
+
+      // Añadiendo evento click para seleccionar una opción
+      if (screen.width < 768) {
+        document.querySelectorAll('.opcion').forEach(element => {
+          element.addEventListener('click', (e) => {
+            let item = e.target.closest('.opcion');
+            // Desactivando todas las opciones
+            document.querySelectorAll('.opcion').forEach((elem) => {
+              elem.classList.remove('activo')
+            })
+            // Activando opción clickeada
+            item.classList.add('activo')
+          });
+        })
+      }
+      // });
+    </script>
   </body>
 
 </html>

@@ -129,17 +129,23 @@ section {
   color: #73ac84;
 }
 /* Opciones:hover */
-.opcion:hover {
+.opcion:hover,
+.opcion.activo {
   transform: scale(1.1);
 }
-.opcion:hover .opcion__color {
+.opcion:hover .opcion__color,
+.opcion.activo .opcion__color {
   background: #365c84;
 }
-.opcion:hover .opcion__contenido h3 {
+.opcion:hover .opcion__contenido h3,
+.opcion.activo .opcion__contenido h3 {
   color: #314254;
 }
-.opcion:hover .opcion__contenido div a {
+.opcion:hover .opcion__contenido div a,
+.opcion.activo .opcion:hover .opcion__contenido div a {
   color: #314254;
+}
+.opcion.activo {
 }
 
 /* Footer */
