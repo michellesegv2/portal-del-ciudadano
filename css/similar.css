@@ -1,0 +1,436 @@
+/* SIMILAR: CONTENIDO */
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+} */
+.container-progress {
+  width: 600px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(33.33% - 25.33px);
+}
+.item-progress:nth-child(2) {
+  width: 76px;
+}
+.round-progress {
+  width: 76px;
+  min-width: 76px;
+  height: 76px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.round-progress img {
+  width: 30px;
+}
+.left-negative {
+  margin-left: -38px;
+}
+.line-progress {
+  background-color: #b5e8e1;
+  height: 60px;
+  min-width: 100%;
+  display: inline-block;
+  margin-left: -38px;
+}
+
+/* active progress */
+.item-progress.active .round-progress::before {
+  content: "";
+  width: 76px;
+  height: 76px;
+  display: block;
+  background-color: #60c5ba;
+  border-radius: 50%;
+  position: absolute;
+}
+.item-progress.active .round-progress::after {
+  content: "";
+  background-image: url("../img/portal/iconos/check.svg");
+  width: 37px;
+  height: 29px;
+  position: absolute;
+}
+.item-progress.active:last-child .round-progress::before,
+.item-progress.active:last-child .round-progress::after {
+  display: none;
+}
+.item-progress.active .line-progress {
+  background-color: #60c5ba;
+}
+
+/* responsive: active progress */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 63px;
+    padding-top: 70px;
+  }
+  .container-progress {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 998;
+    padding: 3px;
+    margin: 0;
+    border-top: 1px solid #cbcbcb;
+  }
+  .round-progress {
+    width: 56px;
+    min-width: 56px;
+    height: 56px;
+  }
+  .item-progress {
+    width: calc(33.33% - 18.66px);
+  }
+  .item-progress:nth-child(2) {
+    width: 56px;
+  }
+  .round-progress img {
+    width: 20px;
+  }
+  .left-negative {
+    margin-left: -18px;
+  }
+  .line-progress {
+    height: 40px;
+    /* margin-left: -18px; */
+  }
+  .item-progress.active .round-progress::before {
+    width: 56px;
+    height: 56px;
+  }
+  .item-progress.active .round-progress::after {
+    width: 27px;
+    height: 19px;
+    background-size: cover;
+  }
+  .ctn {
+    margin: auto;
+  }
+}
+
+/* Pasos */
+.step {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 35px 50px;
+  font-family: Roboto;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: none;
+}
+.step.active {
+  display: block;
+}
+.step .titulo {
+  color: #60c5ba;
+  font-size: 28px;
+  line-height: 33px;
+  text-transform: uppercase;
+}
+.step h3 {
+  text-align: center;
+  font-size: 30px;
+  line-height: 35px;
+  color: #314254;
+  margin-top: 15px;
+}
+.step h3 span {
+  color: #60c5ba;
+}
+.step .pregunta {
+  text-align: center;
+  font-family: Roboto;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 23px;
+  color: #314254;
+  margin-top: 5px;
+}
+.step .desc {
+  margin-top: 22px;
+  font-family: Roboto;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 23px;
+  color: #314254;
+  margin-bottom: 30px;
+}
+.tab {
+  margin-left: 45px;
+}
+.tipo-opciones {
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 19px;
+  color: #314254;
+  margin-top: 40px;
+}
+.tipo-opciones > div {
+  margin-bottom: 15px;
+}
+.tipo-opciones input {
+  margin-right: 15px;
+}
+
+/* input radio */
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #314254;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #60c5ba;
+  border-radius: 100%;
+  background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #60c5ba;
+  position: absolute;
+  top: 6px;
+  left: 2px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/* botones */
+.container-botones {
+  margin-top: 50px;
+  display: flex;
+}
+.container-botones button {
+  width: 160px;
+  height: 39px;
+  font-family: Roboto;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  background: #bdbdbd;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  border: 0;
+  margin-right: 22px;
+}
+.container-botones button.btn-next {
+  background: radial-gradient(148.63% 2029.93% at 91.76% 59.42%, #60c5ba 0%, #d8eef1 100%);
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* formulario */
+.form-step {
+  width: 100%;
+  max-width: 600px;
+}
+.form-step input {
+  border: 0;
+  border-bottom: 1px solid #818181;
+  padding: 1px 3px;
+  font-size: 18px;
+  line-height: 20px;
+  width: 100%;
+  max-width: 250px;
+  margin-right: 20px;
+}
+.row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 40px;
+}
+.col {
+  width: 50%;
+  display: inline-block;
+}
+
+/* tabla */
+.tabla-resumen {
+  width: 100%;
+  max-width: 500px;
+  font-size: 16px;
+}
+.tabla-resumen table {
+  border-collapse: separate;
+  border-spacing: 1px;
+}
+.tabla-resumen table tr th {
+  border: 0.5px solid #59cad2;
+  padding: 5px 10px;
+  background-color: #59cad2;
+  color: #ffffff;
+  text-align: left;
+  border-right: 0;
+}
+.tabla-resumen table tr td {
+  border: 0.5px solid #59cad2;
+  padding: 5px 10px;
+}
+
+/* Términos y condiciones */
+.t-y-c {
+  font-size: 16px;
+  margin-top: 20px;
+}
+.t-y-c a {
+  color: #59cad2;
+}
+
+/* checkbox */
+.item-t-y-c label {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.item-t-y-c label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #ffffff;
+  border: 1px solid #59cad2;
+}
+.item-t-y-c label:hover input ~ .checkmark {
+  background-color: #59cad2;
+}
+.item-t-y-c label input:checked ~ .checkmark {
+  background-color: #59cad2;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.item-t-y-c label input:checked ~ .checkmark:after {
+  display: block;
+}
+.item-t-y-c label .checkmark:after {
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .step {
+    padding: 15px;
+  }
+  .step .titulo {
+    font-size: 22px;
+  }
+  .step h3 {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  .step .pregunta {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .step .desc {
+    font-size: 15px;
+    margin-top: 13px;
+    margin-bottom: 20px;
+  }
+  .tab {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-step input {
+    font-size: 14px;
+  }
+  .tipo-opciones {
+    font-size: 13px;
+  }
+  .col {
+    width: 100%;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .row {
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+  .container-botones {
+    margin-top: 30px;
+  }
+  .container-botones button {
+    font-size: 14px;
+    width: 120px;
+  }
+  .tabla-resumen {
+    font-size: 12px;
+  }
+  .form-step .row:last-child .col:last-child {
+    margin-bottom: 0;
+  }
+
+}

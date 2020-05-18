@@ -1,0 +1,29 @@
+/*
+ * Breadcrumbs
+ * @author mfyance
+ */
+
+breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+}
+breadcrumbs-namepage:before {
+  content: "/";
+  padding-right: 12px;
+  font-size: 18px;
+  align-items: center;
+  vertical-align: middle;
+}
+breadcrumbs-namepage {
+  margin-left: 14px;
+  font: 1.5rem var(--font-secondary);
+  color: var(--color-grey);
+}
+
+breadcrumbs-icon:hover {
+  color: var(--color-primary);
+}
+breadcrumbs-icon {
+  color: var(--color-grey-black);
+  cursor: pointer;
+}

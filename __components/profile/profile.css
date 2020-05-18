@@ -1,0 +1,111 @@
+/*
+ * Profile.css
+ * @author mfyance
+ */
+
+.profile--is-active .profile,
+.profile:hover {
+  /* background: var(--color-secondary); */
+}
+.profile {
+  background: #ffffff;
+  box-shadow: inset 3px 0px 2px rgba(255, 255, 255, 0.5);
+  max-width: 400px;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  position: relative;
+  color: #1f4e79;
+  font-family: "Arimo", sans-serif;
+}
+
+.profile-text--is-blue {
+  color: var(--color-secondary);
+}
+.profile-container-text span {
+  display: block;
+  font: 1.2rem var(--font-primary);
+}
+span.profile-text {
+  display: inline-block;
+  font: 1.5rem var(--font-primary);
+  font-weight: bold;
+}
+.profile-photo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.profile-photo {
+  display: inline-block;
+  vertical-align: middle;
+}
+.profile-container-text {
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 110px;
+  padding-right: 30px;
+}
+
+.profile-icon {
+  position: absolute;
+  right: 11px;
+  top: calc(50% - 7px);
+}
+
+.profile--is-active profile-detail {
+  transform: translateX(0%);
+}
+profile-detail {
+  display: block;
+  position: fixed;
+  top: 75px;
+  right: 0;
+  width: 300px;
+  background: #fff;
+  z-index: 2;
+  height: 100vh;
+  /* padding: var(--padding-20); */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 7px 7px #b4b4b4;
+  transform: translateX(140%);
+  transition: all 0.3s ease;
+}
+
+profile-detail-content {
+  padding: var(--padding-20);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-skyblue);
+}
+profile-detail-menu {
+  padding: var(--padding-20);
+}
+.profile-detail-menu-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.profile-detail-menu-option:hover .profile-detail-menu-option-text,
+.profile-detail-menu-option:hover .profile-detail-menu-option-icon {
+  color: var(--color-primary);
+}
+.profile-detail-menu-option-icon {
+  color: var(--color-menu);
+}
+.profile-detail-menu-option-text {
+  margin-left: 10px;
+  font: 1.5rem var(--font-secondary);
+  color: var(--color-menu);
+}
+
+@media only screen and (max-width: 1000px) {
+  profile-detail {
+    top: 111px;
+  }
+}

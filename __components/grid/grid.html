@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="framework/css/myreset.css">
+	<link rel="stylesheet" href="../../css/design-tokens.css">
+	<link rel="stylesheet" href="../../css/paginator.css">
+	<link rel="stylesheet" href="../../css/form.css">
+	<link rel="stylesheet" href="grid.css">
+	<link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<title>GRID</title>
+</head>
+<body>
+	<section class="box-card">
+		
+	
+
+		<section class="grid-card">
+			<everis-table>
+				<table class="grid">
+					<thead class="grid-thead">
+						<tr class="grid-thead-tr">
+							<th class="grid-thead-th grid-column--is-center grid-column--is-extrasmall">
+								<input type="checkbox" class="form-checkbox form-checkbox--is-center form-checkbox--is-th">
+							</th>
+							<th class="grid-thead-th ">Columna 2</th>
+							<th class="grid-thead-th ">Columna 3</th>
+							<th class="grid-thead-th ">Columna 3</th>
+							<th class="grid-thead-th ">Columna 3</th>
+							<th class="grid-thead-th ">Columna 3</th>
+							<th class="grid-thead-th ">Columna 3</th>
+
+							<th class="grid-thead-th grid-column--is-center grid-column--is-small">Acción</th>
+						</tr>
+					</thead>
+					<tbody class="grid-tbody">
+						<tr class="grid-tbody-tr">
+							<td class="grid-tbody-td grid-column--is-center">
+								<input type="checkbox" class="form-checkbox form-checkbox--is-center ">
+							</td>
+							<td class="grid-tbody-td ">Dato 2</td>
+							<td class="grid-tbody-td ">Dato 3</td>
+							<td class="grid-tbody-td ">Dato 3</td>
+							<td class="grid-tbody-td ">Dato 3</td>
+							<td class="grid-tbody-td ">Dato 3</td>
+							<td class="grid-tbody-td ">Dato 3</td>
+							
+							<td class="grid-tbody-td grid-column--is-center">
+
+								<everis-tooltip>
+									<i class="material-icons grid-icon grid-icon--is-more">more_horiz</i>
+									<everis-tooltip-content>
+										<i class="material-icons grid-icon">edit</i>
+										<i class="material-icons grid-icon">delete</i> 
+									</everis-tooltip-content>
+
+								</everis-tooltip>
+							</td>
+						</tr>
+						
+						
+					</tbody>
+				</table>
+			</everis-table>
+			<everis-paginator>
+				<everis-paginator-page>
+					Página <strong>1</strong> de <strong>20</strong>
+				</everis-paginator-page>
+
+				<everis-paginator-buttons>
+					<button class="button button-paginator button-paginator--is-active">1</button>
+					<button class="button button-paginator">2</button>
+					<button class="button button-paginator">3</button>
+					<button class="button button-paginator">4</button>		
+				</everis-paginator-buttons>
+				
+			</everis-paginator>
+		</section>
+
+	</section>
+
+
+	
+
+	
+</body>
+</html>

@@ -1,0 +1,20 @@
+everis-paginator,
+everis-paginator-page {
+  display: inline-block;
+}
+
+everis-paginator-page {
+  font: 14px var(--font-secondary);
+}
+
+everis-paginator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+everis-paginator-page strong {
+  color: var(--color-grey-black);
+}

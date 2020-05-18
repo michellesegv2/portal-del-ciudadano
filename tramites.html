@@ -18,14 +18,15 @@
     <link rel="stylesheet" href="__components/grid/grid.css">
     <link rel="stylesheet" href="css/tooltip.css">
     <link rel="stylesheet" href="css/core.css">
-    <link rel="stylesheet" href="css/similar.css">
+    <!-- <link rel="stylesheet" href="css/similar.css"> -->
+    <link rel="stylesheet" href="css/tramites.css">
     <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Portal Web</title>
+    <title>Trámites</title>
   </head>
 
   <body>
@@ -110,175 +111,83 @@
 
         <!-- Contenido -->
         <main>
-          <div class="container-progress">
-            <div class="item-progress active">
-              <div class="round-progress">
-                <img src="img/portal/iconos/check.svg" alt="Check">
-              </div>
-              <div class="line-progress"></div>
-            </div>
-            <div class="item-progress">
-              <div class="round-progress">
-                <img src="img/portal/iconos/edit_user.svg" alt="Check">
-              </div>
-              <!-- <div class="line-progress"></div> -->
-            </div>
-            <div class="item-progress">
-              <div class="line-progress"></div>
-              <div class="round-progress left-negative">
-                <img src="img/portal/iconos/password.svg" alt="Check">
-              </div>
-            </div>
-            <div class="item-progress">
-              <div class="line-progress"></div>
-              <div class="round-progress left-negative">
-                <img src="img/portal/iconos/protection.svg" alt="Check">
-              </div>
-            </div>
-          </div>
 
-          <section id="step-1" class="step active">
-            <p class="titulo">1.Tipo</p>
-            <h3>Bienvenido <span>Huber Barreto</span></h3>
-            <p class="pregunta">¿Qué tipo de acceso deseas crear?</p>
-            <div class="tab">
-              <div class="tipo-opciones">
+          <p class="titulo">Estimado usuario, por favor elija el trámite:</p>
+          <section class="tramites">
+            <!-- Opción autorizaciones -->
+            <div class="opcion">
+              <div class="opcion__img">
+                <img src="img/portal/autorizaciones.png" alt="Autorizaciones">
+              </div>
+              <div class="opcion__contenido">
+                <h3>Autorizaciones</h3>
+                <p>Permite el otorgamiento de autorizaciones especiales para vehículos que transporten mercancía
+                  especial y/o
+                  para vehículos especiales.</p>
                 <div>
-                  <input type="radio" id="empresa" name="tipo" value="empresa">
-                  <label for="empresa">Empresa / Persona con Negocio</label>
+                  <div class="item-btn">
+                    <img class="white" src="img/portal/iconos/tutorial-white.svg" alt="Ver video white">
+                    <img class="color" src="img/portal/iconos/tutorial-color.svg" alt="Ver video">
+                    <a href="#">Ver video tutorial</a>
+                  </div>
+                  <div class="item-btn">
+                    <img class="white" src="img/portal/iconos/manual-white.svg" alt="Manual white">
+                    <img class="color" src="img/portal/iconos/manual-color.svg" alt="Manual">
+                    <a href="#">Manual de Usuario</a>
+                  </div>
                 </div>
+              </div>
+            </div>
+
+            <!-- Bonificaciones -->
+            <div class="opcion">
+              <div class="opcion__img">
+                <img src="img/portal/bonificaciones.png" alt="Bonificaciones">
+              </div>
+              <div class="opcion__contenido">
+                <h3>Bonificaciones</h3>
+                <p>Módulo para el otorgamiento de bonif icaciones para los vehículos con suspensión neumático y/o
+                  neumáticos
+                  extra anchos.</p>
                 <div>
-                  <input type="radio" id="persona" name="tipo" value="persona">
-                  <label for="persona">Persona</label>
+                  <div class="item-btn">
+                    <img class="white" src="img/portal/iconos/tutorial-white.svg" alt="Ver video white">
+                    <img class="color" src="img/portal/iconos/tutorial-color.svg" alt="Ver video">
+                    <a href="#">Ver video tutorial</a>
+                  </div>
+                  <div class="item-btn">
+                    <img class="white" src="img/portal/iconos/manual-white.svg" alt="Manual white">
+                    <img class="color" src="img/portal/iconos/manual-color.svg" alt="Manual">
+                    <a href="#">Manual de Usuario</a>
+                  </div>
                 </div>
+              </div>
+            </div>
+
+            <!-- Peaje Pre-Pago -->
+            <div class="opcion">
+              <div class="opcion__img">
+                <img src="img/portal/peaje.png" alt="Peaje Pre-Pago">
+              </div>
+              <div class="opcion__contenido">
+                <h3>Peaje Pre-Pago</h3>
+                <p>Permite la recarga de dinero para el uso prepago en los peajes que administrados por esta entidad.
+                </p>
                 <div>
-                  <input type="radio" id="extrajero" name="tipo" value="extrajero">
-                  <label for="extrajero">Empresa Extranjera</label>
-                </div>
-              </div>
-              <div class="container-botones">
-                <button>Cancelar</button>
-                <button class="btn-next" data-siguiente="step-2">Siguiente <img
-                    src="img/portal/iconos/arrow_forward.svg" alt="Flecha siguiente"></button>
-              </div>
-            </div>
-          </section>
-
-          <section id="step-2" class="step">
-            <div class="ctn">
-              <p class="titulo">2. Datos</p>
-              <div class="tab">
-                <p class="desc">Ingresa tus datos de contacto</p>
-                <div class="form-step">
-                  <div class="row">
-                    <div class="col">
-                      <input type="text" name="ruc" placeholder="R.U.C">
-                    </div>
-                    <div class="col">
-                      <input type="text" name="razon" placeholder="Razón Social">
-                    </div>
+                  <div class="item-btn">
+                    <img class="white" src="img/portal/iconos/tutorial-white.svg" alt="Ver video white">
+                    <img class="color" src="img/portal/iconos/tutorial-color.svg" alt="Ver video">
+                    <a href="#">Ver video tutorial</a>
                   </div>
-                  <div class="row">
-                    <div class="col">
-                      <input type="text" name="emali-1" placeholder="E-mail 1">
-                    </div>
-                    <div class="col">
-                      <input type="text" name="email-2" placeholder="E-mail 2">
-                    </div>
+                  <div class="item-btn">
+                    <img class="white" src="img/portal/iconos/manual-white.svg" alt="Manual white">
+                    <img class="color" src="img/portal/iconos/manual-color.svg" alt="Manual">
+                    <a href="#">Manual de Usuario</a>
                   </div>
-                  <div class="row">
-                    <div class="col">
-                      <input type="text" name="celular-1" placeholder="Celular 1">
-                    </div>
-                    <div class="col">
-                      <input type="text" name="celular-2" placeholder="Celular 2">
-                    </div>
-                  </div>
-                </div>
-                <div class="container-botones">
-                  <button>Cancelar</button>
-                  <button class="btn-next" data-siguiente="step-3">Siguiente <img
-                      src="img/portal/iconos/arrow_forward.svg" alt="Flecha siguiente"></button>
-                </div>
+                </div>F
               </div>
             </div>
 
-          </section>
-
-          <section id="step-3" class="step">
-            <p class="titulo">3. Clave</p>
-            <div class="tab">
-              <p class="desc">Ingresa tu contraseña adecuada</p>
-              <div class="form-step">
-                <div class="row">
-                  <div class="col">
-                    <input type="text" name="documento" placeholder="Tipo de Documento">
-                  </div>
-                  <div class="col">
-                    <input type="text" name="numero" placeholder="Nro de Documento">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <input type="text" name="contraseña" placeholder="Ingrese una contraseña">
-                  </div>
-                  <div class="col">
-                    <input type="text" name="validar" placeholder="Repita la Contraseña">
-                  </div>
-                </div>
-              </div>
-              <div class="container-botones">
-                <button>Cancelar</button>
-                <button class="btn-next" data-siguiente="step-4">Siguiente <img
-                    src="img/portal/iconos/arrow_forward.svg" alt="Flecha siguiente"></button>
-              </div>
-            </div>
-          </section>
-
-          <section id="step-4" class="step">
-            <p class="titulo">4. Confirmar</p>
-            <div class="tab">
-              <p class="desc">Ingresa tu contraseña adecuada</p>
-              <div class="tabla-resumen">
-                <table>
-                  <tr>
-                    <th>Tipo de Documento</th>
-                    <td>RUC</td>
-                  </tr>
-                  <tr>
-                    <th>Nro de Documento</th>
-                    <td>20102030404</td>
-                  </tr>
-                  <tr>
-                    <th>Email</th>
-                    <td>joseperez@gmail.com; meche@gmail.com</td>
-                  </tr>
-                  <tr>
-                    <th>Celular</th>
-                    <td>906222973; 996002274</td>
-                  </tr>
-                </table>
-                <div class="t-y-c">
-                  <div class="item-t-y-c">
-                    <label>Acepto los <a href="#">Términos y Condiciones</a>
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                  <div class="item-t-y-c">
-                    <label>Acepto los <a href="#">Cláusula de Protección de Datos Personales</a>
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="container-botones">
-                <button>Cancelar</button>
-                <button class="btn-next" data-siguiente="step-1">Siguiente <img
-                    src="img/portal/iconos/arrow_forward.svg" alt="Flecha siguiente"></button>
-              </div>
-            </div>
           </section>
         </main>
         <profile-detail>

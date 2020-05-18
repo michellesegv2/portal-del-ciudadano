@@ -1,0 +1,26 @@
+/*
+ * Design Tokens
+ * @author mfyance
+ */
+
+:root {
+  --color-primary: #ff560a;
+  --color-primary-black: #003f88;
+  --color-secondary: #005ecc;
+  --color-secondary-light: #00b9eb;
+  --color-secondary-black: #e24600;
+  --color-skyblue: #cef5ff;
+  --color-grey: #ccc;
+  --color-grey-light: #f8f8f8;
+  --color-grey-medium: #707070;
+  --color-grey-black: #4b4b4b;
+  --color-grey-aside: #3d4154;
+  --color-purple-aside: #8b90a9;
+  --color-bg-aside: #464d6f;
+  --color-menu: #363c56;
+  --color-disabled: #ddd;
+  --font-primary: Arimo;
+  --font-secondary: Roboto;
+  --padding-10: 10px;
+  --padding-20: 20px;
+}
