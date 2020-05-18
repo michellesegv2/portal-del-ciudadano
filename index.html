@@ -312,24 +312,25 @@
       document.querySelector('.close').addEventListener('click', (e) => {
         document.querySelector('.app-aside').classList.remove('show')
       });
-      document.querySelectorAll('.btn-next').forEach((elem) => {
-        elem
-          .addEventListener('click', (e) => {
-            let item = e.target.getAttribute('data-siguiente');
-            document.querySelectorAll('.step').forEach((e) => { e.classList.remove('active') })
-            document.getElementById(item).classList.add('active');
+      document
+        .querySelectorAll('.btn-next').forEach((elem) => {
+          elem
+            .addEventListener('click', (e) => {
+              let item = e.target.tagName.toLowerCase() == 'img' ? e.target.parentNode.getAttribute('data-siguiente') : e.target.getAttribute('data-siguiente');
+              document.querySelectorAll('.step').forEach((e) => { e.classList.remove('active') })
+              document.getElementById(item).classList.add('active');
 
-            let index = item.split('-')[1];
-            for (let i = 0; i < index; i++) {
-              if (i == 0) {
-                document.querySelectorAll('.item-progress').forEach((e) => { e.classList.remove('active') });
-                document.querySelectorAll('.item-progress')[0].classList.add('active');
-              } else {
-                document.querySelectorAll('.item-progress')[i].classList.add('active');
+              let index = item.split('-')[1];
+              for (let i = 0; i < index; i++) {
+                if (i == 0) {
+                  document.querySelectorAll('.item-progress').forEach((e) => { e.classList.remove('active') });
+                  document.querySelectorAll('.item-progress')[0].classList.add('active');
+                } else {
+                  document.querySelectorAll('.item-progress')[i].classList.add('active');
+                }
               }
-            }
-          });
-      })
+            });
+        })
 
     </script>
   </body>
