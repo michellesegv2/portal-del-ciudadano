@@ -435,10 +435,15 @@
     flex-direction: column;
     align-items: center;
   }
+  .form-step-col-3 input,
   .form-step input {
-    font-size: 14px;
+    font-size: 15px;
     max-width: 200px;
     margin-right: 0;
+  }
+  .form-step-col-3 input {
+    margin-bottom: 25px;
+    min-width: 200px;
   }
   .tipo-opciones {
     font-size: 13px;
