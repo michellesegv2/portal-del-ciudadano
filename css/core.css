@@ -238,6 +238,11 @@ app-title {
   }
   .container-nav.show {
     display: block;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
   }
   .overlay {
     width: calc(100% - 220px);
