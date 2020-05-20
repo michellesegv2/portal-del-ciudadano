@@ -5,7 +5,7 @@
 
 .profile--is-active .profile,
 .profile:hover {
-  /* background: var(--color-secondary); */
+  background: var(--color-secondary);
 }
 .profile {
   background: #ffffff;
@@ -18,7 +18,7 @@
   width: 100%;
   position: relative;
   color: #1f4e79;
-  font-family: "Arimo", sans-serif;
+  font-family: var(--font-primary), sans-serif;
 }
 
 .profile-text--is-blue {

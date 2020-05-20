@@ -29,7 +29,7 @@
   </head>
 
   <body>
-    <main-page class="profile--is-active2">
+    <main-page>
       <header class="app-header">
         <div class="app-logo">
           <img src="img/portal/iconos/logo-mtc.svg" alt="logo MTC">
@@ -63,57 +63,76 @@
       </header>
       <app-content>
         <!-- Menú lateral -->
-        <aside class="app-aside">
-          <aside-title>
-            <img src="img/portal/user.png" alt="Foto perfil" class="titulo-img">
-            <img src="img/portal/iconos/usuario.svg" alt="Editar usuario">
-            <img src="img/portal/iconos/usuario-details.svg" alt="Detalles usuario">
-            <img class="close" src="img/portal/iconos/exit.svg" alt="Salir">
-          </aside-title>
-          <menu class="block block-tab">
-            <menu-option>
-              <button class="button button-tab">
-                <img src="img/portal/iconos/settings.svg" alt="Configuraciones">
-                <span class="button-tab-name">Opción 1</span>
-                <img class="profile-icon" src="img/portal/iconos/dropdown.svg" alt="Flecha">
-              </button>
-            </menu-option>
-            <menu-option class="menu-option-active">
-              <button class="button button-tab">
-                <img src="img/portal/iconos/find_in_page.svg" alt="Encontrar">
-                <span class="button-tab-name">Opción 2</span>
-                <img class="profile-icon" src="img/portal/iconos/dropdown.svg" alt="Flecha">
-              </button>
-              <nav class="button-tab-content">
-                <ul class="button-tab-content-ul">
-                  <li class="button-tab-content-li">
-                    <a href="javascript:void(0)" class="button-tab-content-a">Opción 1</a>
-                  </li>
-                  <li class="button-tab-content-li">
-                    <a href="javascript:void(0)" class="button-tab-content-a">Opción 2</a>
-                  </li>
-                  <li class="button-tab-content-li">
-                    <a href="javascript:void(0)" class="button-tab-content-a">Opción 3</a>
-                  </li>
-                </ul>
-              </nav>
-            </menu-option>
-            <menu-option>
-              <button class="button button-tab">
-                <img src="img/portal/iconos/trending_up.svg" alt="Trending">
-                <span class="button-tab-name">Opción 3</span>
-                <img class="profile-icon" src="img/portal/iconos/dropdown.svg" alt="Flecha">
-              </button>
-            </menu-option>
-          </menu>
-        </aside>
+        <div class="container-nav">
+          <aside class="app-aside">
+            <aside-title>
+              <img src="img/portal/user.png" alt="Foto perfil" class="titulo-img">
+              <img src="img/portal/iconos/usuario.svg" alt="Editar usuario">
+              <img src="img/portal/iconos/usuario-details.svg" alt="Detalles usuario">
+              <img src="img/portal/iconos/exit.svg" alt="Salir">
+            </aside-title>
+            <menu class="block block-tab">
+              <menu-option>
+                <button class="button button-tab">
+                  <i class="material-icons">settings</i>
+                  <span class="button-tab-name">Opción 1</span>
+                  <img class="profile-icon" src="img/portal/iconos/dropdown.svg" alt="Flecha">
+                </button>
+                <nav class="button-tab-content">
+                  <ul class="button-tab-content-ul">
+                    <li class="button-tab-content-li">
+                      <a href="javascript:void(0)" class="button-tab-content-a">Opción 1</a>
+                    </li>
+                    <li class="button-tab-content-li">
+                      <a href="javascript:void(0)" class="button-tab-content-a">Opción 2</a>
+                    </li>
+                    <li class="button-tab-content-li">
+                      <a href="javascript:void(0)" class="button-tab-content-a">Opción 3</a>
+                    </li>
+                  </ul>
+                </nav>
+              </menu-option>
+              <menu-option>
+                <button class="button button-tab">
+                  <i class="material-icons">find_in_page</i>
+                  <span class="button-tab-name">Opción 2</span>
+                  <img class="profile-icon" src="img/portal/iconos/dropdown.svg" alt="Flecha">
+                </button>
+                <nav class="button-tab-content">
+                  <ul class="button-tab-content-ul">
+                    <li class="button-tab-content-li">
+                      <a href="javascript:void(0)" class="button-tab-content-a">Opción 1</a>
+                    </li>
+                    <li class="button-tab-content-li">
+                      <a href="javascript:void(0)" class="button-tab-content-a">Opción 2</a>
+                    </li>
+                    <li class="button-tab-content-li">
+                      <a href="javascript:void(0)" class="button-tab-content-a">Opción 3</a>
+                    </li>
+                  </ul>
+                </nav>
+              </menu-option>
+              <menu-option>
+                <button class="button button-tab">
+                  <i class="material-icons">trending_up</i>
+                  <span class="button-tab-name">Opción 3</span>
+                  <!-- <img class="profile-icon" src="img/portal/iconos/dropdown.svg" alt="Flecha"> -->
+                </button>
+              </menu-option>
+            </menu>
+          </aside>
+          <span class="close">
+            <i class="material-icons">close</i>
+          </span>
+          <div class="overlay"></div>
+        </div>
 
         <!-- Contenido -->
         <main>
           <div class="container-progress">
-            <div class="item-progress active">
+            <div class="item-progress">
               <div class="round-progress">
-                <img src="img/portal/iconos/check.svg" alt="Check">
+                <i class="material-icons">attach_file</i>
               </div>
               <div class="line-progress"></div>
             </div>
@@ -121,17 +140,18 @@
               <div class="round-progress">
                 <img src="img/portal/iconos/edit_user.svg" alt="Check">
               </div>
-              <!-- <div class="line-progress"></div> -->
+              <div class="line-progress"></div>
             </div>
             <div class="item-progress">
-              <div class="line-progress"></div>
-              <div class="round-progress left-negative">
+
+              <div class="round-progress">
                 <img src="img/portal/iconos/password.svg" alt="Check">
               </div>
+              <div class="line-progress"></div>
             </div>
             <div class="item-progress">
-              <div class="line-progress"></div>
-              <div class="round-progress left-negative">
+              <!-- <div class="line-progress"></div> -->
+              <div class="round-progress">
                 <img src="img/portal/iconos/protection.svg" alt="Check">
               </div>
             </div>
@@ -169,31 +189,13 @@
               <p class="titulo">2. Datos</p>
               <div class="tab">
                 <p class="desc">Ingresa tus datos de contacto</p>
-                <div class="form-step">
-                  <div class="row">
-                    <div class="col">
-                      <input type="text" name="ruc" placeholder="R.U.C">
-                    </div>
-                    <div class="col">
-                      <input type="text" name="razon" placeholder="Razón Social">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                      <input type="text" name="emali-1" placeholder="E-mail 1">
-                    </div>
-                    <div class="col">
-                      <input type="text" name="email-2" placeholder="E-mail 2">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                      <input type="text" name="celular-1" placeholder="Celular 1">
-                    </div>
-                    <div class="col">
-                      <input type="text" name="celular-2" placeholder="Celular 2">
-                    </div>
-                  </div>
+                <div class="form-step-col-3">
+                  <input type="text" name="ruc" placeholder="R.U.C">
+                  <input type="text" name="razon" placeholder="Razón Social">
+                  <input type="text" name="emali-1" placeholder="E-mail 1">
+                  <input type="text" name="email-2" placeholder="E-mail 2">
+                  <input type="text" name="celular-1" placeholder="Celular 1">
+                  <input type="text" name="celular-2" placeholder="Celular 2">
                 </div>
                 <div class="container-botones">
                   <button>Cancelar</button>
@@ -202,9 +204,7 @@
                 </div>
               </div>
             </div>
-
           </section>
-
           <section id="step-3" class="step">
             <p class="titulo">3. Clave</p>
             <div class="tab">
@@ -305,13 +305,30 @@
         </profile-detail>
       </app-content>
     </main-page>
+    <!-- Scripts temporales -->
     <script>
+      // Menú
       document.querySelector('.container-burger').addEventListener('click', (e) => {
-        document.querySelector('.app-aside').classList.add('show')
+        document.querySelector('.container-nav').classList.add('show')
       });
       document.querySelector('.close').addEventListener('click', (e) => {
-        document.querySelector('.app-aside').classList.remove('show')
+        document.querySelector('.container-nav').classList.remove('show')
       });
+
+      document.querySelectorAll('menu menu-option').forEach((elem) => {
+        elem.addEventListener('click', (e) => {
+          // Active item menú
+          var item = e.target.parentNode;
+          item.classList.toggle('menu-option-active');
+
+          // Active opciones
+          if (item.children[1]) {
+            item.children[1].classList.toggle('active')
+          }
+        });
+      });
+
+      // botones de navegación
       document
         .querySelectorAll('.btn-next').forEach((elem) => {
           elem
@@ -320,18 +337,16 @@
               document.querySelectorAll('.step').forEach((e) => { e.classList.remove('active') })
               document.getElementById(item).classList.add('active');
 
-              let index = item.split('-')[1];
-              for (let i = 0; i < index; i++) {
-                if (i == 0) {
-                  document.querySelectorAll('.item-progress').forEach((e) => { e.classList.remove('active') });
-                  document.querySelectorAll('.item-progress')[0].classList.add('active');
-                } else {
+              let index = item.split('-')[1] - 1;
+              if (index == 0) {
+                document.querySelectorAll('.item-progress').forEach((e) => { e.classList.remove('active') });
+              } else {
+                for (let i = 0; i < index; i++) {
                   document.querySelectorAll('.item-progress')[i].classList.add('active');
                 }
               }
             });
-        })
-
+        });
     </script>
   </body>
 

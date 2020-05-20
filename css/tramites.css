@@ -2,13 +2,13 @@
 
 /* Título */
 p.titulo {
-  font-family: Roboto;
+  font-family: var(--font-secondary);
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
   line-height: 42px;
   text-align: center;
-  color: #314254;
+  color: var(--color-secondary-dark);
   margin: 60px 20px 10px;
 }
 
@@ -53,24 +53,23 @@ p.titulo {
   font-size: 15px;
   line-height: 18px;
   text-align: justify;
-  color: #333333;
+  color: var(--color-secondary-dark);
 }
 .opcion__contenido h3 {
-  font-family: Roboto;
+  font-family: var(--font-secondary);
   font-size: 17.9967px;
   line-height: 21px;
-  color: #73ac84;
   text-align: center;
   margin-bottom: 10px;
   font-weight: bold;
-  color: #76ceff;
+  color: var(--color-secondary-dark);
 }
 .opcion__contenido p {
   font-size: 15px;
   line-height: 18px;
   text-align: justify;
-  color: #333333;
-  font-family: Roboto;
+  color: var(--color-secondary-dark);
+  font-family: var(--font-secondary);
 }
 .opcion__contenido > div {
   position: absolute;
@@ -79,26 +78,24 @@ p.titulo {
   left: 0;
   display: flex;
   height: 50px;
-  background: #ffffff;
+  background: var(--color-white);
   box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25);
 }
 .opcion__contenido > div a {
   display: block;
-  font-family: Roboto;
+  font-family: var(--font-secondary);
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
   line-height: 12px;
 
-  color: #314254;
+  color: var(--color-secondary-dark);
 }
 .item-btn {
   width: 50%;
   display: inline-block;
   text-decoration: none;
-  /* font-size: 15px; */
-  /* line-height: 20px; */
-  color: #73ac84;
+  color: var(--color-secondary-green);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,17 +105,17 @@ p.titulo {
   cursor: pointer;
 }
 .item-btn:first-child {
-  border-right: 1px solid #9dd4ad;
+  border-right: 1px solid var(--color-secondary-green);
 }
 .item-btn .white {
   display: none;
 }
 .item-btn:hover {
-  background: #76c1aa;
+  background: var(--color-secondary-green);
   box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25);
 }
 .opcion__contenido .item-btn:hover a {
-  color: #ffffff;
+  color: var(--color-white);
 }
 .item-btn:hover .white {
   display: block;

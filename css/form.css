@@ -23,7 +23,7 @@
 .form-textarea:disabled,
 .form-input:disabled {
   background: #e3e3e3;
-  color: #ffffff;
+  color: var(--color-white);
   cursor: not-allowed;
 }
 .form-textarea:focus,
@@ -56,7 +56,7 @@
 .form-select {
   width: 100%;
   padding: 9px 10px;
-  background-color: #fff;
+  background-color: var(--color-white);
   border-radius: 7px;
   border-color: #dedede;
 }
@@ -75,7 +75,7 @@
   width: 40px;
   border: none;
   background: var(--color-secondary);
-  color: #fff;
+  color: var(--color-white);
 }
 
 .form-double2 {
@@ -224,7 +224,7 @@
 .button-paginator:hover {
   border-color: var(--color-secondary) !important;
   background-color: var(--color-secondary) !important;
-  color: #fff;
+  color: var(--color-white);
 }
 .button-paginator {
   background: white;
@@ -243,14 +243,17 @@
 } */
 .button-icon {
   padding: 10px;
-  background: #fff;
+  background: var(--color-white);
   border-radius: 50%;
   width: 45px;
   height: 45px;
-  color: #17375f;
+  color: var(--color-blue-dark);
   box-shadow: 0 2px 5px #ddd;
   transition: all 0.3s ease;
-  background: #d9d9d9;
+  background: var(--color-grey-light);
+}
+.button-icon:hover {
+  background: var(--color-grey-medium);
 }
 
 ::-webkit-input-placeholder {

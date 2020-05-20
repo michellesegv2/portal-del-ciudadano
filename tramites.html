@@ -39,9 +39,6 @@
           <div class="container-burger">
             <span class="material-icons app-options-burger">menu</span>
           </div>
-          <!-- <div class="container-left-header">
-
-          </div> -->
           <h2 class="titulo-header m-l-20">PORTAL DE ADMINISTRADOR</h2>
           <div class="app-options-buttons">
             <button class="button button-icon">
@@ -62,52 +59,72 @@
           </section>
         </div>
       </header>
+
       <app-content>
         <!-- Menú lateral -->
-        <aside class="app-aside">
-          <aside-title>
-            <img src="img/portal/user.png" alt="Foto perfil" class="titulo-img">
-            <img src="img/portal/iconos/usuario.svg" alt="Editar usuario">
-            <img src="img/portal/iconos/usuario-details.svg" alt="Detalles usuario">
-            <img class="close" src="img/portal/iconos/exit.svg" alt="Salir">
-          </aside-title>
-          <menu class="block block-tab">
-            <menu-option>
-              <button class="button button-tab">
-                <img src="img/portal/iconos/settings.svg" alt="Configuraciones">
-                <span class="button-tab-name">Opción 1</span>
-                <img class="profile-icon" src="img/portal/iconos/dropdown.svg" alt="Flecha">
-              </button>
-            </menu-option>
-            <menu-option class="menu-option-active">
-              <button class="button button-tab">
-                <img src="img/portal/iconos/find_in_page.svg" alt="Encontrar">
-                <span class="button-tab-name">Opción 2</span>
-                <img class="profile-icon" src="img/portal/iconos/dropdown.svg" alt="Flecha">
-              </button>
-              <nav class="button-tab-content">
-                <ul class="button-tab-content-ul">
-                  <li class="button-tab-content-li">
-                    <a href="javascript:void(0)" class="button-tab-content-a">Opción 1</a>
-                  </li>
-                  <li class="button-tab-content-li">
-                    <a href="javascript:void(0)" class="button-tab-content-a">Opción 2</a>
-                  </li>
-                  <li class="button-tab-content-li">
-                    <a href="javascript:void(0)" class="button-tab-content-a">Opción 3</a>
-                  </li>
-                </ul>
-              </nav>
-            </menu-option>
-            <menu-option>
-              <button class="button button-tab">
-                <img src="img/portal/iconos/trending_up.svg" alt="Trending">
-                <span class="button-tab-name">Opción 3</span>
-                <img class="profile-icon" src="img/portal/iconos/dropdown.svg" alt="Flecha">
-              </button>
-            </menu-option>
-          </menu>
-        </aside>
+        <div class="container-nav">
+          <aside class="app-aside">
+            <aside-title>
+              <img src="img/portal/user.png" alt="Foto perfil" class="titulo-img">
+              <img src="img/portal/iconos/usuario.svg" alt="Editar usuario">
+              <img src="img/portal/iconos/usuario-details.svg" alt="Detalles usuario">
+              <img src="img/portal/iconos/exit.svg" alt="Salir">
+            </aside-title>
+            <menu class="block block-tab">
+              <menu-option>
+                <button class="button button-tab">
+                  <i class="material-icons">settings</i>
+                  <span class="button-tab-name">Opción 1</span>
+                  <img class="profile-icon" src="img/portal/iconos/dropdown.svg" alt="Flecha">
+                </button>
+                <nav class="button-tab-content">
+                  <ul class="button-tab-content-ul">
+                    <li class="button-tab-content-li">
+                      <a href="javascript:void(0)" class="button-tab-content-a">Opción 1</a>
+                    </li>
+                    <li class="button-tab-content-li">
+                      <a href="javascript:void(0)" class="button-tab-content-a">Opción 2</a>
+                    </li>
+                    <li class="button-tab-content-li">
+                      <a href="javascript:void(0)" class="button-tab-content-a">Opción 3</a>
+                    </li>
+                  </ul>
+                </nav>
+              </menu-option>
+              <menu-option>
+                <button class="button button-tab">
+                  <i class="material-icons">find_in_page</i>
+                  <span class="button-tab-name">Opción 2</span>
+                  <img class="profile-icon" src="img/portal/iconos/dropdown.svg" alt="Flecha">
+                </button>
+                <nav class="button-tab-content">
+                  <ul class="button-tab-content-ul">
+                    <li class="button-tab-content-li">
+                      <a href="javascript:void(0)" class="button-tab-content-a">Opción 1</a>
+                    </li>
+                    <li class="button-tab-content-li">
+                      <a href="javascript:void(0)" class="button-tab-content-a">Opción 2</a>
+                    </li>
+                    <li class="button-tab-content-li">
+                      <a href="javascript:void(0)" class="button-tab-content-a">Opción 3</a>
+                    </li>
+                  </ul>
+                </nav>
+              </menu-option>
+              <menu-option>
+                <button class="button button-tab">
+                  <i class="material-icons">trending_up</i>
+                  <span class="button-tab-name">Opción 3</span>
+                  <!-- <img class="profile-icon" src="img/portal/iconos/dropdown.svg" alt="Flecha"> -->
+                </button>
+              </menu-option>
+            </menu>
+          </aside>
+          <span class="close">
+            <i class="material-icons">close</i>
+          </span>
+          <div class="overlay"></div>
+        </div>
 
         <!-- Contenido -->
         <main>
@@ -184,7 +201,7 @@
                     <img class="color" src="img/portal/iconos/manual-color.svg" alt="Manual">
                     <a href="#">Manual de Usuario</a>
                   </div>
-                </div>F
+                </div>
               </div>
             </div>
 
@@ -215,11 +232,25 @@
       </app-content>
     </main-page>
     <script>
+      // Menú
       document.querySelector('.container-burger').addEventListener('click', (e) => {
-        document.querySelector('.app-aside').classList.add('show')
+        document.querySelector('.container-nav').classList.add('show')
       });
       document.querySelector('.close').addEventListener('click', (e) => {
-        document.querySelector('.app-aside').classList.remove('show')
+        document.querySelector('.container-nav').classList.remove('show')
+      });
+
+      document.querySelectorAll('menu menu-option').forEach((elem) => {
+        elem.addEventListener('click', (e) => {
+          // Active item menú
+          var item = e.target.parentNode;
+          item.classList.toggle('menu-option-active');
+
+          // Active opciones
+          if (item.children[1]) {
+            item.children[1].classList.toggle('active')
+          }
+        });
       });
     </script>
   </body>

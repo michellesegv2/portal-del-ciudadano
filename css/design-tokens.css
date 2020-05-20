@@ -4,15 +4,24 @@
  */
 
 :root {
-  --color-primary: #ff560a;
+  /* nuevos */
+  --color-primary: #60c5ba;
+  --color-secondary: #b5e8e1;
+  --color-secondary-green: #76C1AA;
+  --color-secondary-dark: #314254;
+  --color-grey-light: #d9d9d9;
+  --color-grey-medium: #bdbdbd;
+  --color-grey-hight: #818181;
+  --color-blue-dark: #17375f;
+  --color-blue-light: #2d67b0;
+  --color-white: #ffffff;
+
+  /* extras */
   --color-primary-black: #003f88;
-  --color-secondary: #005ecc;
   --color-secondary-light: #00b9eb;
   --color-secondary-black: #e24600;
   --color-skyblue: #cef5ff;
   --color-grey: #ccc;
-  --color-grey-light: #f8f8f8;
-  --color-grey-medium: #707070;
   --color-grey-black: #4b4b4b;
   --color-grey-aside: #3d4154;
   --color-purple-aside: #8b90a9;
